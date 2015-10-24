@@ -52,7 +52,8 @@ class ConversationBox extends React.Component<ConversationBoxProps, { messageNum
             </div>;
         }
         else {
-            this.props.onClose();
+            if (this.props.onClose !== null)
+                this.props.onClose();
 
             return <div></div>;
         }
