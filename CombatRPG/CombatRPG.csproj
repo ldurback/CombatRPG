@@ -139,11 +139,11 @@
     <TypeScriptCompile Include="scripts\states\Boot.ts" />
     <TypeScriptCompile Include="scripts\states\SplashScreen.ts" />
     <TypeScriptCompile Include="scripts\typings\es6-collections\es6-collections.d.ts" />
-    <TypeScriptCompile Include="typings\jquery\jquery.d.ts" />
-    <TypeScriptCompile Include="typings\reactChildren.d.ts" />
-    <TypeScriptCompile Include="typings\react\react-global.d.ts" />
-    <TypeScriptCompile Include="typings\react\react.d.ts" />
-    <TypeScriptCompile Include="typings\tsd.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\jquery\jquery.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\reactChildren.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\react\react-global.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\react\react.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\tsd.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="bower_components\jquery\.bower.json" />
