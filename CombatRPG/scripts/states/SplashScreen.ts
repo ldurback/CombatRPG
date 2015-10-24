@@ -4,12 +4,12 @@
         create() {
             $('#splash-screen').show();
 
-            this.game.state.add('BattleLoader', BattleLoader, false);
+            this.game.state.add('Loader', Loader, false);
 
             $('#splash-screen').on("click", (e: Event) => {
                 $('#splash-screen').hide();
 
-                this.game.state.start('BattleLoader');
+                this.game.state.start('Loader');
             });
         }
     }

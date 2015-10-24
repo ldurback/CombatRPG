@@ -135,8 +135,11 @@
     <TypeScriptCompile Include="scripts\lib\phaser.d.ts" />
     <TypeScriptCompile Include="scripts\lib\pixi.d.ts" />
     <TypeScriptCompile Include="scripts\ReactComponents\ConversationBox.tsx" />
-    <TypeScriptCompile Include="scripts\states\BattleLoader.tsx" />
+    <TypeScriptCompile Include="scripts\ReactComponents\Menu.tsx" />
     <TypeScriptCompile Include="scripts\states\Boot.ts" />
+    <TypeScriptCompile Include="scripts\states\Loader.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="scripts\states\SplashScreen.ts" />
     <TypeScriptCompile Include="scripts\typings\es6-collections\es6-collections.d.ts" />
     <TypeScriptCompile Include="scripts\typings\jquery\jquery.d.ts" />

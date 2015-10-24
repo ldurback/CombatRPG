@@ -5,10 +5,10 @@
 
 class Message extends React.Component<MessageProps, {}> {
     render() {
-        return <div>
-                {this.props.name && <span>{this.props.name}: </span>}
-                {this.props.text}
-            </div>;
+        return (<div>
+            {this.props.name && <span>{this.props.name}: </span>}
+            {this.props.text}
+        </div>);
     }
 }
 
@@ -17,7 +17,7 @@ interface ConversationBoxProps extends React.Props<any> {
 }
 
 class ConversationBox extends React.Component<ConversationBoxProps, { messageNumber: number }> {
-    constructor(props: any) {
+    constructor(props: ConversationBoxProps) {
         super(props);
 
         this.state = {
@@ -45,15 +45,18 @@ class ConversationBox extends React.Component<ConversationBoxProps, { messageNum
         }
 
         if (this.state.messageNumber + 1 <= childArray.length) {
-            return <div>
+            return (<div>
                 {childArray[this.state.messageNumber]}
 
                 <button onClick={ e => this.nextMessage() }>{buttonText}</button>
-            </div>;
+            </div>);
         }
         else {
             if (this.props.onClose !== null)
                 this.props.onClose();
+
+            // reset conversation box
+            this.setState({ messageNumber: 0 });
 
             return <div></div>;
         }
