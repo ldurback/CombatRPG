@@ -1,0 +1,23 @@
+{
+  "name": "CombatRPG",
+  "authors": [
+    "ldurback <luke.durback@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react": "~0.14.0",
+    "jquery": "~2.1.4"
+  }
+}
