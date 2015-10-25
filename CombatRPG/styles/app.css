@@ -1,4 +1,4 @@
-﻿* {
+﻿#game * {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -7,10 +7,12 @@
     user-select: none;
 }
 
-ul
-{
-    margin: 0;
-    list-style-type: square;
+#game * {
+    cursor: default;
+}
+
+#game .link, #game .link * {
+    cursor: pointer;
 }
 
 #game {
@@ -51,6 +53,11 @@ ul
 
 #menu-screen {
     text-align: left;
+}
+
+#menu-screen ul {
+    margin: 0;
+    list-style-type: square;
 }
 
 #conversations {

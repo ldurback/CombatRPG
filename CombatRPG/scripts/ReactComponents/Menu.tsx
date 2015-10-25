@@ -2,6 +2,7 @@
     export interface MenuProps extends React.Props<any> {
         title: string;
         open?: boolean;
+        titleClassName: string;
     }
 
     export class Menu extends React.Component<MenuProps, { open: boolean }> {
@@ -22,7 +23,7 @@
 
         render() {
             return (<div>
-                <div onClick={e => this.toggleOpen() }>
+                <div className={this.props.titleClassName} onClick={e => this.toggleOpen() }>
                     {this.props.title}
                 </div>
                 {this.state.open && this.props.children}
