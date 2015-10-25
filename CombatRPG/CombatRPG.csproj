@@ -147,7 +147,9 @@
     <TypeScriptCompile Include="scripts\lib\p2.d.ts" />
     <TypeScriptCompile Include="scripts\lib\phaser.d.ts" />
     <TypeScriptCompile Include="scripts\lib\pixi.d.ts" />
+    <TypeScriptCompile Include="scripts\Utils\MapToArray.ts" />
     <TypeScriptCompile Include="scripts\ReactComponents\ConversationBox.tsx" />
+    <TypeScriptCompile Include="scripts\ReactComponents\ItemTable.tsx" />
     <TypeScriptCompile Include="scripts\ReactComponents\Menu.tsx" />
     <TypeScriptCompile Include="scripts\ReactComponents\Message.tsx" />
     <TypeScriptCompile Include="scripts\screens\Inventory.tsx" />

@@ -1,4 +1,6 @@
-﻿namespace CombatRPG {
+﻿///<reference path="Item.ts" />
+
+namespace CombatRPG {
     export namespace Items {
         export class Potion extends Item {
             static useInBattle = true;

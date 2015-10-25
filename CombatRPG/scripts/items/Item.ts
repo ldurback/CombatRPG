@@ -9,7 +9,7 @@
                 this.game = game;
             }
 
-            //abstract inBattleUse(target: BattleEntity);
+            //abstract inBattleUse();
             abstract outsideBattleUse();
         }
     }

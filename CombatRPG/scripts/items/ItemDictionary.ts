@@ -1,4 +1,7 @@
-﻿namespace CombatRPG {
+﻿///<reference path="Potion.ts" />
+///<reference path="BlankItem.ts" />
+
+namespace CombatRPG {
     export namespace Items {
         export var itemDictionary: { [index: string]: any };
 
