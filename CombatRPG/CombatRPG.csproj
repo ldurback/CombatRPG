@@ -130,6 +130,13 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="scripts\app.ts" />
+    <TypeScriptCompile Include="scripts\entities\battle\enemies\BowOrc.ts" />
+    <TypeScriptCompile Include="scripts\entities\battle\enemies\Bullet.ts" />
+    <TypeScriptCompile Include="scripts\entities\battle\enemies\Slime.ts" />
+    <TypeScriptCompile Include="scripts\entities\battle\Entity.ts" />
+    <TypeScriptCompile Include="scripts\entities\battle\Player.ts" />
+    <TypeScriptCompile Include="scripts\entities\battle\Weapon.ts" />
+    <TypeScriptCompile Include="scripts\entities\map\Player.ts" />
     <TypeScriptCompile Include="scripts\entities\Status.ts" />
     <TypeScriptCompile Include="scripts\Game.ts" />
     <TypeScriptCompile Include="scripts\items\BlankItem.ts">
@@ -147,6 +154,13 @@
     <TypeScriptCompile Include="scripts\lib\p2.d.ts" />
     <TypeScriptCompile Include="scripts\lib\phaser.d.ts" />
     <TypeScriptCompile Include="scripts\lib\pixi.d.ts" />
+    <TypeScriptCompile Include="scripts\states\battles\Battle.ts" />
+    <TypeScriptCompile Include="scripts\states\battles\BowOrcBattle.ts" />
+    <TypeScriptCompile Include="scripts\states\battles\SlimeBattle.ts" />
+    <TypeScriptCompile Include="scripts\states\GameOver.tsx" />
+    <TypeScriptCompile Include="scripts\states\BattleWin.tsx" />
+    <TypeScriptCompile Include="scripts\states\maps\BasicMap.ts" />
+    <TypeScriptCompile Include="scripts\states\maps\Map.ts" />
     <TypeScriptCompile Include="scripts\Utils\MapToArray.ts" />
     <TypeScriptCompile Include="scripts\ReactComponents\ConversationBox.tsx" />
     <TypeScriptCompile Include="scripts\ReactComponents\ItemTable.tsx" />

@@ -40,6 +40,12 @@ namespace CombatRPG {
 
                     var itemType: any = Items.itemDictionary[nameAndAmount[0]];
 
+                    if (itemType == null) {
+                        console.log(nameAndAmount[0] + " is not an item registered in the dictionary");
+
+                        return <tr key={index}></tr>;
+                    }
+
                     var disabled: boolean = false;
 
                     if (this.props.disableUnusableInBattle && itemType.useInBattle == false) {

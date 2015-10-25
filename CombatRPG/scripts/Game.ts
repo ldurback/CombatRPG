@@ -1,4 +1,6 @@
-﻿///<reference path="entities/Status.ts" />
+﻿///<reference path="lib/phaser.d.ts" />
+
+///<reference path="entities/Status.ts" />
 ///<reference path="screens/StatusMenu.tsx" />
 ///<reference path="states/Boot.ts" />
 

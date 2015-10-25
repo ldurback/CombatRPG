@@ -50,6 +50,10 @@
     height : 100%
 }
 
+#gameover-screen {
+    text-align: center;
+}
+
 #dev-menu-screen {
     text-align: left;
     z-index : 0;

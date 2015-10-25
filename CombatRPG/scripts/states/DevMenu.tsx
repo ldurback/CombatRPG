@@ -1,12 +1,22 @@
-﻿///<reference path="../ReactComponents/Menu.tsx" />
+﻿///<reference path="../lib/phaser.d.ts" />
+
+///<reference path="../ReactComponents/Menu.tsx" />
 ///<reference path="../ReactComponents/ConversationBox.tsx" />
 ///<reference path="../ReactComponents/Message.tsx" />
+
+///<reference path="maps/BasicMap.ts" />
+///<reference path="battles/SlimeBattle.ts" />
 
 namespace CombatRPG {
     export namespace States {
         export class DevMenu extends Phaser.State {
             create() {
                 this.game.return.state = "DevMenu";
+                this.game.inBattle = false;
+
+                this.game.state.add("BasicMap", States.Maps.BasicMap);
+                this.game.state.add("SlimeBattle", States.Battles.SlimeBattle);
+                this.game.state.add("BowOrcBattle", States.Battles.BowOrcBattle);
 
                 this.createMenu();
             }
@@ -28,10 +38,23 @@ namespace CombatRPG {
                         </ul>
                     </ReactComponents.Menu>
                     <ReactComponents.Menu titleClassName="link menu-link" title="Battles">
-                        no battles yet
+                        <ul><li><div className="link menu-link" onClick={e => {
+                            $("#dev-menu-screen").hide();
+                            this.game.state.start("SlimeBattle");
+                        } }>Slime Battle</div></li>
+
+                            <li><div className="link menu-link" onClick={e => {
+                                $("#dev-menu-screen").hide();
+                                this.game.state.start("BowOrcBattle");
+                            } }>BowOrc Battle</div></li></ul>
                     </ReactComponents.Menu>
                     <ReactComponents.Menu titleClassName="link menu-link" title="Maps">
-                        no maps yet
+                        <ul><li><div className="link menu-link" onClick={e => {
+                            $("#dev-menu-screen").hide();
+
+                            this.game.return.position = { x: 400, y: 400 };
+                            this.game.state.start("BasicMap");
+                        } }>Basic Map</div></li></ul>
                     </ReactComponents.Menu>
                 </div>);
 

@@ -1,4 +1,6 @@
-﻿namespace CombatRPG {
+﻿///<reference path="../lib/phaser.d.ts" />
+
+namespace CombatRPG {
     export namespace States {
         export class SplashScreen extends Phaser.State {
             create() {

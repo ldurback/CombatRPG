@@ -1,4 +1,5 @@
-﻿///<reference path="SplashScreen.ts" />
+﻿///<reference path="../lib/phaser.d.ts" />
+///<reference path="SplashScreen.ts" />
 ///<reference path="DevMenu.tsx" />
 
 namespace CombatRPG {

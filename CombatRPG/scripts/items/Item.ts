@@ -1,4 +1,6 @@
-﻿namespace CombatRPG {
+﻿///<reference path="../Game.ts" />
+
+namespace CombatRPG {
     export namespace Items {
         export abstract class Item {
             protected game: Game;

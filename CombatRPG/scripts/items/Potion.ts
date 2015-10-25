@@ -1,4 +1,5 @@
 ﻿///<reference path="Item.ts" />
+///<reference path="../entities/Status.ts" />
 
 namespace CombatRPG {
     export namespace Items {
