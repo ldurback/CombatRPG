@@ -5,7 +5,8 @@
         }
 
         createMenu() {
-            var loaderMenu = (<div><b>Dev Menu</b>
+            var loaderMenu = (<div>
+                <b>Dev Menu</b>
                 <Menu title="Conversations">
                     <ul>
                     <li><div onClick={e => {
@@ -32,7 +33,7 @@
         }
 
         runDemoConversation() {
-            var demoConversation = (<ConversationBox onClose={() => {
+            var demoConversation = (<ConversationBox key="demoConvo" onClose={() => {
                 $("#conversations").hide()
             } }>
                 <div>This demo has nothing in it yet except for some text.
@@ -48,7 +49,7 @@
         }
 
         runSlimeConversation() {
-            var slimeConversation = (<ConversationBox onClose={() => {
+            var slimeConversation = (<ConversationBox key="slimeConvo" onClose={() => {
                 $("#conversations").hide()
             } }>
                 <Message imageURL="assets/images/slime.png" name="Slime">I'm a slime!</Message>

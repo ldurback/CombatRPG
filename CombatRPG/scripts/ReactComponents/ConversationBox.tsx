@@ -33,6 +33,11 @@
             });
         }
 
+        resetAndCloseMessage() {
+            this.setState({ messageNumber: 0 });
+            this.props.onClose();
+        }
+
         render() {
             var childArray = React.Children.toArray(this.props.children);
 
@@ -44,11 +49,7 @@
             }
             // if last message
             else {
-                return (<div className="message" onClick={ e => {
-                    // reset messageNumber
-                    this.setState({ messageNumber: 0 });
-                    this.props.onClose();
-                } }>
+                return (<div className="message" onClick={ e => this.resetAndCloseMessage() }>
                     {childArray[this.state.messageNumber]}
                 </div>);
             }
