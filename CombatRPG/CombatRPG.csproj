@@ -130,17 +130,36 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="scripts\app.ts" />
+    <TypeScriptCompile Include="scripts\entities\Status.ts" />
     <TypeScriptCompile Include="scripts\Game.ts" />
+    <TypeScriptCompile Include="scripts\items\BlankItem.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="scripts\items\Item.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="scripts\items\ItemDictionary.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="scripts\items\Potion.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="scripts\lib\p2.d.ts" />
     <TypeScriptCompile Include="scripts\lib\phaser.d.ts" />
     <TypeScriptCompile Include="scripts\lib\pixi.d.ts" />
     <TypeScriptCompile Include="scripts\ReactComponents\ConversationBox.tsx" />
     <TypeScriptCompile Include="scripts\ReactComponents\Menu.tsx" />
+    <TypeScriptCompile Include="scripts\ReactComponents\Message.tsx" />
+    <TypeScriptCompile Include="scripts\screens\Inventory.tsx" />
+    <TypeScriptCompile Include="scripts\screens\MenuScreen.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="scripts\states\Boot.ts" />
-    <TypeScriptCompile Include="scripts\states\Loader.tsx">
+    <TypeScriptCompile Include="scripts\states\DevMenu.tsx">
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="scripts\states\SplashScreen.ts" />
+    <TypeScriptCompile Include="scripts\screens\StatusMenu.tsx" />
     <TypeScriptCompile Include="scripts\typings\es6-collections\es6-collections.d.ts" />
     <TypeScriptCompile Include="scripts\typings\jquery\jquery.d.ts" />
     <TypeScriptCompile Include="scripts\typings\reactChildren.d.ts" />
@@ -167,6 +186,7 @@
       <DependentUpon>web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
   </PropertyGroup>
