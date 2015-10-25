@@ -7,21 +7,21 @@
         createMenu() {
             var loaderMenu = (<div>
                 <b>Dev Menu</b>
-                <Menu titleClassName="link" title="Conversations">
+                <Menu titleClassName="link menu-link" title="Conversations">
                     <ul>
-                    <li><div className="link" onClick={e => {
+                    <li><div className="link menu-link" onClick={e => {
                         this.runDemoConversation();
                     } }>Demo Conversation</div></li>
-                    <li><div className="link" onClick={e => {
+                    <li><div className="link menu-link" onClick={e => {
                         this.runSlimeConversation();
                     } }>Slime Conversation</div></li>
                     </ul>
                 </Menu>
-                <Menu titleClassName="link" title="Battles">
-                    <ul><li>no battles yet</li></ul>
+                <Menu titleClassName="link menu-link" title="Battles">
+                    no battles yet
                 </Menu>
-                <Menu titleClassName="link" title="Maps">
-                    <ul><li>no maps yet</li></ul>
+                <Menu titleClassName="link menu-link" title="Maps">
+                    no maps yet
                 </Menu>
             </div>);
 

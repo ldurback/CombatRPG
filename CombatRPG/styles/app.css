@@ -60,6 +60,12 @@
     list-style-type: square;
 }
 
+.menu-link {
+    border: ridge;
+    border-color: white;
+    border-width: medium;
+}
+
 #conversations {
     position: absolute;
     left: 0;
