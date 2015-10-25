@@ -35,6 +35,9 @@ namespace CombatRPG {
 
             render() {
                 var rows = Utils.mapToArray(this.props.source).map((nameAndAmount: [string, number], index: number, array: [string, number][]) => {
+                    if (nameAndAmount[1] <= 0) // hide items with 0 amount
+                        return <tr key={index}></tr>;
+
                     var itemType: any = Items.itemDictionary[nameAndAmount[0]];
 
                     var disabled: boolean = false;
