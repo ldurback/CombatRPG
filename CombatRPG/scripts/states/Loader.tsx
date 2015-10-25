@@ -7,10 +7,9 @@
         createMenu() {
             var loaderMenu = (<Menu title="Conversations">
                 <div onClick={e => {
-                    $("#menu-screen").hide();
                     this.runDemoConversation();
                 }}>Demo Conversation</div>
-                </Menu>);
+            </Menu>);
 
             var target = document.getElementById("menu-screen");
 
@@ -21,18 +20,17 @@
 
         runDemoConversation() {
             var demoConversation = (<ConversationBox onClose={() => {
-                $("#menu-screen").show();
-                $("#msg-screen").hide();
+                $("#conversations").hide()
             } }>
-                    <Message text="This demo has nothing in it yet" />
-                    <Message text="Click done to close" />
-                </ConversationBox>);
+                <div>This demo has nothing in it yet</div>
+                <div>Click done to close</div>
+            </ConversationBox>);
 
-            var target = document.getElementById("msg-screen");
+            var target = document.getElementById("conversations");
 
             React.render(demoConversation, target);
 
-            $("#msg-screen").show();
+            $("#conversations").show();
         }
     }
 }
