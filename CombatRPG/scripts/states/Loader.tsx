@@ -7,15 +7,20 @@
         createMenu() {
             var loaderMenu = (<div><b>Dev Menu</b>
                 <Menu title="Conversations">
-                    <div onClick={e => {
+                    <ul>
+                    <li><div onClick={e => {
                         this.runDemoConversation();
-                    }}>Demo Conversation</div>
+                    } }>Demo Conversation</div></li>
+                    <li><div onClick={e => {
+                        this.runSlimeConversation();
+                    } }>Slime Conversation</div></li>
+                    </ul>
                 </Menu>
                 <Menu title="Battles">
-                    no battles yet
+                    <ul><li>no battles yet</li></ul>
                 </Menu>
                 <Menu title="Maps">
-                    no maps yet
+                    <ul><li>no maps yet</li></ul>
                 </Menu>
             </div>);
 
@@ -38,6 +43,20 @@
             var target = document.getElementById("conversations");
 
             React.render(demoConversation, target);
+
+            $("#conversations").show();
+        }
+
+        runSlimeConversation() {
+            var slimeConversation = (<ConversationBox onClose={() => {
+                $("#conversations").hide()
+            } }>
+                <Message imageURL="assets/images/slime.png" name="Slime">I'm a slime!</Message>
+            </ConversationBox>);
+
+            var target = document.getElementById("conversations");
+
+            React.render(slimeConversation, target);
 
             $("#conversations").show();
         }

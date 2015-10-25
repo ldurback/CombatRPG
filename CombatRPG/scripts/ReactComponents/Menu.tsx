@@ -8,7 +8,7 @@
         constructor(props: MenuProps) {
             super(props);
 
-            if (this.props.open !== null) {
+            if (this.props.open != null) {
                 this.state = { open: this.props.open };
             }
             else {
@@ -17,9 +17,7 @@
         }
 
         toggleOpen() {
-            var newOpenState = !this.state.open;
-
-            this.setState({ open: newOpenState });
+            this.setState({ open: !this.state.open });
         }
 
         render() {
