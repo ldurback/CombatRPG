@@ -11,7 +11,7 @@ namespace CombatRPG {
                 this.game = game;
             }
 
-            //abstract inBattleUse();
+            abstract inBattleUse(target: Entities.Battle.Entity);
             abstract outsideBattleUse();
         }
     }

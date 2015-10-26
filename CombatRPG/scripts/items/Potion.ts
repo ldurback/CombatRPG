@@ -1,5 +1,6 @@
 ﻿///<reference path="Item.ts" />
 ///<reference path="../entities/Status.ts" />
+///<reference path="../entities/battle/Entity.ts" />
 
 namespace CombatRPG {
     export namespace Items {
@@ -7,11 +8,11 @@ namespace CombatRPG {
             static useInBattle = true;
             static useOutsideBattle = true;
 
-            /*inBattleUse(target: BattleEntity) {
-                target.stats.currentHP += (target.stats.maxHP / 5);
-                if (target.stats.currentHP > target.stats.maxHP)
-                    target.stats.currentHP = target.stats.maxHP;
-            }*/
+            inBattleUse(target: Entities.Battle.Entity) {
+                target.status.currentHP += (target.status.maxHP / 5);
+                if (target.status.currentHP > target.status.maxHP)
+                    target.status.currentHP = target.status.maxHP;
+            }
 
             outsideBattleUse() {
                 var playerStats: Entities.Status = this.game.player.status;

@@ -22,7 +22,7 @@ namespace CombatRPG {
                 var item: Items.Item = (new itemType(this.props.game)) as Items.Item;
 
                 if (this.props.game.inBattle) {
-                    throw "In battle item usage not implemented";
+                    item.inBattleUse(this.props.game.player.battleEntity);
                 }
                 else {
                     item.outsideBattleUse();

@@ -6,7 +6,7 @@ namespace CombatRPG {
             static useInBattle = false;
             static useOutsideBattle = false;
 
-            //inBattleUse(target: BattleEntity) { }
+            inBattleUse(target: Entities.Battle.Entity) { }
             outsideBattleUse() { }
         }
     }

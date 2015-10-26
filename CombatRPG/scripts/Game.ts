@@ -10,6 +10,8 @@ namespace Phaser {
             status: CombatRPG.Entities.Status;
             gold: number;
             items: Map<string, number>;
+
+            battleEntity: CombatRPG.Entities.Battle.Entity;
         }
 
         loot: {
@@ -45,8 +47,9 @@ namespace CombatRPG {
                 },
 
                 gold: 0,
+                items: new Map<string, number>(),
 
-                items: new Map<string, number>()
+                battleEntity: null  
             };
 
             this.player.items.set('Potion', 2);

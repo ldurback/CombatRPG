@@ -40,6 +40,8 @@ namespace CombatRPG {
 
                     this.createScene();
 
+                    this.game.player.battleEntity = this.player;
+
                     this.hpGauge = this.add.text(0, 0, "HP: ", { fill: "#ffffff" });
                     this.menuUp = false;
                 }
