@@ -46,13 +46,11 @@ namespace CombatRPG {
                     defense: 2
                 },
 
-                gold: 0,
+                gold: 10,
                 items: new Map<string, number>(),
 
                 battleEntity: null  
             };
-
-            this.player.items.set('Potion', 2);
 
             this.loot = {
                 gold: 0,

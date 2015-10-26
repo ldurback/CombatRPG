@@ -136,6 +136,8 @@
     <TypeScriptCompile Include="scripts\entities\battle\Entity.ts" />
     <TypeScriptCompile Include="scripts\entities\battle\Player.ts" />
     <TypeScriptCompile Include="scripts\entities\battle\Weapon.ts" />
+    <TypeScriptCompile Include="scripts\entities\map\InvisibleBox.ts" />
+    <TypeScriptCompile Include="scripts\entities\map\Girl.ts" />
     <TypeScriptCompile Include="scripts\entities\map\Player.ts" />
     <TypeScriptCompile Include="scripts\entities\Status.ts" />
     <TypeScriptCompile Include="scripts\Game.ts" />
@@ -157,7 +159,7 @@
     <TypeScriptCompile Include="scripts\states\battles\SlimeBattle.ts" />
     <TypeScriptCompile Include="scripts\states\GameOver.tsx" />
     <TypeScriptCompile Include="scripts\states\BattleWin.tsx" />
-    <TypeScriptCompile Include="scripts\states\maps\BasicMap.ts" />
+    <TypeScriptCompile Include="scripts\states\maps\BasicMap.tsx" />
     <TypeScriptCompile Include="scripts\states\maps\Map.ts" />
     <TypeScriptCompile Include="scripts\states\shops\PotionShop.tsx" />
     <TypeScriptCompile Include="scripts\states\shops\Shop.tsx" />

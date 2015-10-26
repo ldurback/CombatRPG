@@ -4,7 +4,7 @@
 ///<reference path="../ReactComponents/ConversationBox.tsx" />
 ///<reference path="../ReactComponents/Message.tsx" />
 
-///<reference path="maps/BasicMap.ts" />
+///<reference path="maps/BasicMap.tsx" />
 ///<reference path="battles/SlimeBattle.ts" />
 ///<reference path="shops/PotionShop.tsx" />
 

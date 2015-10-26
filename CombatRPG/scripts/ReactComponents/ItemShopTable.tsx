@@ -23,6 +23,10 @@
                     throw "Error: Shop tried to let a player buy an item too expensive for him";
 
                 this.props.game.player.gold -= itemType.buyingPrice;
+
+                if (!this.props.game.player.items.has(itemName))
+                    this.props.game.player.items.set(itemName, 0);
+
                 this.props.game.player.items.set(itemName,
                     this.props.game.player.items.get(itemName) + 1);
             }

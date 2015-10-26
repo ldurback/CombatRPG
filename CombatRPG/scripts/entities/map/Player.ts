@@ -30,9 +30,6 @@ namespace CombatRPG {
                 }
 
                 update() {
-                    //  Do this AFTER the collide check, or we won't have blocked/touching set
-                    var standing = this.body.blocked.down || this.body.touching.down;
-
                     this.body.velocity.x = 0;
                     this.body.velocity.y = 0;
 
@@ -91,7 +88,6 @@ namespace CombatRPG {
                         this.idle = true;
                     }
                 }
-
             }
         }
     }

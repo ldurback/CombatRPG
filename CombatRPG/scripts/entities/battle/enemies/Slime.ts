@@ -27,14 +27,18 @@ namespace CombatRPG {
                         this.facing = 'left';
 
                         this.events.onKilled.addOnce(() => {
-                            this.game.loot.gold += 1;
-                            if (Math.random() < 0.25) {
-                                if (!this.game.loot.items.has('Potion')) {
-                                    this.game.loot.items.set('Potion', 0);
-                                }
-                                this.game.loot.items.set('Potion', this.game.loot.items.get('Potion') + 1);
-                            }
+                            this.giveLoot();
                         });
+                    }
+
+                    giveLoot() {
+                        this.game.loot.gold += 1;
+                        if (Math.random() < 0.25) {
+                            if (!this.game.loot.items.has('Potion')) {
+                                this.game.loot.items.set('Potion', 0);
+                            }
+                            this.game.loot.items.set('Potion', this.game.loot.items.get('Potion') + 1);
+                        }
                     }
 
                     doMotion() {

@@ -44,55 +44,14 @@ namespace CombatRPG {
 
                     this.hpGauge = this.add.text(0, 0, "HP: ", { fill: "#ffffff" });
                     this.menuUp = false;
+
+                    this.game.inBattle = true;
                 }
 
                 abstract createScene();
 
                 update() {
-                    this.physics.arcade.collide(this.player, this.platforms);
-                    this.physics.arcade.collide(this.enemies, this.platforms);
-
-                    this.physics.arcade.overlap(this.player, this.enemies, (player: Entities.Battle.Player, enemy: Entities.Battle.Entity) => {
-                        if (!player.invincible && !enemy.invincible) {
-                            player.status.currentHP -= enemy.status.strength / player.status.defense;
-                            player.invincible = true;
-
-                            var invincibleTimer: Phaser.Timer = this.game.time.create(true);
-                            invincibleTimer.add(1000, () => {
-                                player.invincible = false;
-                            });
-                            invincibleTimer.start();
-                        }
-                    });
-
-                    this.physics.arcade.overlap(this.player, this.enemyBullets, (player: Entities.Battle.Player, bullet: Entities.Battle.Entity) => {
-                        if (!player.invincible) {
-                            player.status.currentHP -= bullet.status.strength / player.status.defense;
-                            player.invincible = true;
-
-                            var invincibleTimer: Phaser.Timer = this.game.time.create(true);
-                            invincibleTimer.add(1000, () => {
-                                player.invincible = false;
-                            });
-                            invincibleTimer.start();
-                        }
-                    });
-
-                    this.physics.arcade.overlap(this.player.equippedWeapon, this.enemies, (playerWeapon: Entities.Battle.Weapon, enemy: Entities.Battle.Entity) => {
-                        if (!enemy.invincible) {
-                            enemy.status.currentHP -= playerWeapon.wielder.status.strength / enemy.status.defense;
-
-                            enemy.invincible = true;
-
-                            var invincibleTimer: Phaser.Timer = this.game.time.create(true);
-                            invincibleTimer.add(1000, () => {
-                                enemy.invincible = false;
-                            });
-                            invincibleTimer.start();
-                        }
-                    });
-
-                    this.physics.arcade.collide(this.player, this.enemies);
+                    this.runCollisions(); 
 
                     if (!this.player.alive) {
                         this.game.state.start('GameOver', true, false);
@@ -100,6 +59,36 @@ namespace CombatRPG {
 
                     if (this.enemies.getFirstAlive() == null) {
                         this.game.state.start('BattleWin', true, false);
+                    }
+                }
+
+                runCollisions() {
+                    this.physics.arcade.collide(this.player, this.platforms);
+                    this.physics.arcade.collide(this.enemies, this.platforms);
+
+                    this.physics.arcade.collide(this.player, this.enemies, (player: Entities.Battle.Player, enemy: Entities.Battle.Entity) => {
+                        this.hurtEntityByAttacker(enemy, player);
+                    });
+
+                    this.physics.arcade.overlap(this.player, this.enemyBullets, (player: Entities.Battle.Player, bullet: Entities.Battle.Entity) => {
+                        this.hurtEntityByAttacker(bullet, player);
+                    });
+
+                    this.physics.arcade.overlap(this.player.equippedWeapon, this.enemies, (playerWeapon: Entities.Battle.Weapon, enemy: Entities.Battle.Entity) => {
+                        this.hurtEntityByAttacker(playerWeapon.wielder, enemy);
+                    });
+                }
+
+                hurtEntityByAttacker(attacker: Entities.Battle.Entity, defender: Entities.Battle.Entity) {
+                    if (!defender.invincible && !attacker.invincible) {
+                        defender.status.currentHP -= attacker.status.strength / defender.status.defense;
+                        defender.invincible = true;
+
+                        var invincibleTimer: Phaser.Timer = this.game.time.create(true);
+                        invincibleTimer.add(1000, () => {
+                            defender.invincible = false;
+                        });
+                        invincibleTimer.start();
                     }
                 }
 
