@@ -1,5 +1,4 @@
 ﻿///<reference path="Potion.ts" />
-///<reference path="BlankItem.ts" />
 
 namespace CombatRPG {
     export namespace Items {
@@ -7,6 +6,5 @@ namespace CombatRPG {
 
         itemDictionary = [];
         itemDictionary["Potion"] = Potion;
-        itemDictionary["BlankItem"] = BlankItem;
     }
 }

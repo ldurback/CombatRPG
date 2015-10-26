@@ -139,9 +139,6 @@
     <TypeScriptCompile Include="scripts\entities\map\Player.ts" />
     <TypeScriptCompile Include="scripts\entities\Status.ts" />
     <TypeScriptCompile Include="scripts\Game.ts" />
-    <TypeScriptCompile Include="scripts\items\BlankItem.ts">
-      <SubType>Code</SubType>
-    </TypeScriptCompile>
     <TypeScriptCompile Include="scripts\items\Item.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
@@ -154,6 +151,7 @@
     <TypeScriptCompile Include="scripts\lib\p2.d.ts" />
     <TypeScriptCompile Include="scripts\lib\phaser.d.ts" />
     <TypeScriptCompile Include="scripts\lib\pixi.d.ts" />
+    <TypeScriptCompile Include="scripts\ReactComponents\ItemShopTable.tsx" />
     <TypeScriptCompile Include="scripts\states\battles\Battle.ts" />
     <TypeScriptCompile Include="scripts\states\battles\BowOrcBattle.ts" />
     <TypeScriptCompile Include="scripts\states\battles\SlimeBattle.ts" />
@@ -161,9 +159,11 @@
     <TypeScriptCompile Include="scripts\states\BattleWin.tsx" />
     <TypeScriptCompile Include="scripts\states\maps\BasicMap.ts" />
     <TypeScriptCompile Include="scripts\states\maps\Map.ts" />
+    <TypeScriptCompile Include="scripts\states\shops\PotionShop.tsx" />
+    <TypeScriptCompile Include="scripts\states\shops\Shop.tsx" />
     <TypeScriptCompile Include="scripts\Utils\MapToArray.ts" />
     <TypeScriptCompile Include="scripts\ReactComponents\ConversationBox.tsx" />
-    <TypeScriptCompile Include="scripts\ReactComponents\ItemTable.tsx" />
+    <TypeScriptCompile Include="scripts\ReactComponents\ItemInventoryTable.tsx" />
     <TypeScriptCompile Include="scripts\ReactComponents\Menu.tsx" />
     <TypeScriptCompile Include="scripts\ReactComponents\Message.tsx" />
     <TypeScriptCompile Include="scripts\screens\Inventory.tsx" />

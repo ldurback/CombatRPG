@@ -53,7 +53,6 @@ namespace CombatRPG {
             };
 
             this.player.items.set('Potion', 2);
-            this.player.items.set('BlankItem', 5);
 
             this.loot = {
                 gold: 0,

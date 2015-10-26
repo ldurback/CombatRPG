@@ -112,3 +112,11 @@
 .disabledItem {
     color: gray;
 }
+
+.unselected {
+    color: gray;
+}
+
+.unavailable {
+    color: gray;
+}

@@ -2,7 +2,7 @@
 
 namespace CombatRPG {
     export namespace ReactComponents {
-        export interface ItemTableProps extends React.Props<any> {
+        export interface ItemInventoryTableProps extends React.Props<any> {
             source: Map<string, number>;
             disableUnusableInBattle: boolean;
             disableUnusableOutsideBattle: boolean;
@@ -11,7 +11,7 @@ namespace CombatRPG {
             game: Phaser.Game;
         }
 
-        export class ItemTable extends React.Component<ItemTableProps, {}> {
+        export class ItemInventoryTable extends React.Component<ItemInventoryTableProps, {}> {
             tryUseItem(itemName: string) {
                 var itemAmount: number = this.props.game.player.items.get(itemName);
                 if (itemAmount <= 0)

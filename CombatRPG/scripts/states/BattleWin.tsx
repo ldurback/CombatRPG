@@ -1,4 +1,5 @@
 ﻿///<reference path="../lib/phaser.d.ts" />
+///<reference path="../ReactComponents/ItemInventoryTable.tsx" />
 
 namespace CombatRPG {
     export namespace States {
@@ -23,7 +24,7 @@ namespace CombatRPG {
             renderLootScreen() {
                 var battleWonText = <div><b>Loot</b>
                     <div>{this.game.loot.gold} Gold</div>
-                    <ReactComponents.ItemTable
+                    <ReactComponents.ItemInventoryTable
                         game={this.game}
                         source={this.game.loot.items}
                         allowUse={false}

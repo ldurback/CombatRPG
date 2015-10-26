@@ -6,6 +6,7 @@
 
 ///<reference path="maps/BasicMap.ts" />
 ///<reference path="battles/SlimeBattle.ts" />
+///<reference path="shops/PotionShop.tsx" />
 
 namespace CombatRPG {
     export namespace States {
@@ -17,6 +18,7 @@ namespace CombatRPG {
                 this.game.state.add("BasicMap", States.Maps.BasicMap);
                 this.game.state.add("SlimeBattle", States.Battles.SlimeBattle);
                 this.game.state.add("BowOrcBattle", States.Battles.BowOrcBattle);
+                this.game.state.add("PotionShop", States.Shops.PotionShop);
 
                 this.createMenu();
             }
@@ -55,6 +57,12 @@ namespace CombatRPG {
                             this.game.return.position = { x: 400, y: 400 };
                             this.game.state.start("BasicMap");
                         } }>Basic Map</div></li></ul>
+                    </ReactComponents.Menu>
+                    <ReactComponents.Menu titleClassName="link menu-link" title="Shops">
+                        <ul><li><div className="link menu-link" onClick={e => {
+                            $("#dev-menu-screen").hide();
+                            this.game.state.start("PotionShop");
+                        } }>Potion Shops</div></li></ul>
                     </ReactComponents.Menu>
                 </div>);
 
