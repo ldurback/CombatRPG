@@ -11,8 +11,12 @@ namespace CombatRPG {
 
             getLoot() {
                 this.game.loot.items.forEach((itemAmount: number, itemName: string, map: Map<string, number>) => {
-                    if (itemAmount > 0)
+                    if (itemAmount > 0) {
+                        if (!this.game.player.items.has(itemName))
+                            this.game.player.items.set(itemName, 0);
+
                         this.game.player.items.set(itemName, this.game.player.items.get(itemName) + itemAmount);
+                    }
                 });
 
                 this.game.player.gold += this.game.loot.gold;

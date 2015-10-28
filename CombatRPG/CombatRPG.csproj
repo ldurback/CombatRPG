@@ -154,6 +154,7 @@
     <TypeScriptCompile Include="scripts\lib\phaser.d.ts" />
     <TypeScriptCompile Include="scripts\lib\pixi.d.ts" />
     <TypeScriptCompile Include="scripts\ReactComponents\ItemShopTable.tsx" />
+    <TypeScriptCompile Include="scripts\screens\Inventory.tsx" />
     <TypeScriptCompile Include="scripts\states\battles\Battle.ts" />
     <TypeScriptCompile Include="scripts\states\battles\BowOrcBattle.ts" />
     <TypeScriptCompile Include="scripts\states\battles\SlimeBattle.ts" />
@@ -168,7 +169,6 @@
     <TypeScriptCompile Include="scripts\ReactComponents\ItemInventoryTable.tsx" />
     <TypeScriptCompile Include="scripts\ReactComponents\Menu.tsx" />
     <TypeScriptCompile Include="scripts\ReactComponents\Message.tsx" />
-    <TypeScriptCompile Include="scripts\screens\Inventory.tsx" />
     <TypeScriptCompile Include="scripts\screens\MenuScreen.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
